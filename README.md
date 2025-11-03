@@ -297,6 +297,14 @@ This phase of the project focuses on enhancing the website’s functionality, us
 The improvements include adding JavaScript-based interactivity, implementing form validation, improving Search Engine Optimization (SEO), and ensuring mobile responsiveness.
 All code was tested across multiple devices and browsers to ensure consistent functionality and accessibility.
 
+Note on Part 2
+
+No major improvements or revisions were made to Part 2 because the website already met all requirements and achieved full marks.
+
+The structure, layout, and design from Part 2 were retained as they aligned with the assessment rubric and functioned correctly across all devices.
+
+Part 3 therefore focuses entirely on enhancing interactivity, functionality, and SEO, while maintaining the original high-quality foundation established in Part 2.
+
 Website Goals – Part 3
 
 The main goals for Part 3 were to enhance functionality, improve user engagement, and increase online visibility through technical and visual upgrades.
@@ -571,8 +579,7 @@ sitemap
 
 
 
-References (additional)
-
+References 
 
 W3C (2023). HTML & CSS Standards. Available at: https://www.w3.org/ (Accessed: 27 August 2025).
 
@@ -627,5 +634,20 @@ Yoast (2024) Technical SEO basics. Available at: https://yoast.com/seo-basics
  (Accessed: 3 November 2025).
 
 W3C (2022) Web Content Accessibility Guidelines (WCAG) 2.1. Available at: https://www.w3.org/TR/WCAG21/
+ (Accessed: 3 November 2025).
+
+ Crudu, V. & MoldStud Research Team. 2025. Enhance User Experience with CSS3 Transitions for Smooth Visual Feedback. [Online]. Available at: https://moldstud.com/articles/p-enhance-user-experience-with-css3-transitions-for-smooth-visual-feedback
+ (Accessed: 3 November 2025).
+
+MDN Web Docs. 2025. Client-side form validation. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
+ (Accessed: 3 November 2025).
+
+W3C. 2023. CSS View Transitions Module Level 1. Working Draft 3 August. Available at: https://www.w3.org/TR/2023/WD-css-view-transitions-1-20230803/
+ (Accessed: 3 November 2025).
+
+Rao, P.R., Chaurasia, A.K. & Singh, S.P. 2023. Modern Web Design: Utilizing HTML5, CSS3, and Responsive Techniques. Journal of Novel Research and Innovative Development, Vol. 1, Issue 8. Available at: https://tijer.org/jnrid/papers/JNRID2308001.pdf
+ (Accessed: 3 November 2025).
+
+Crudu, G. & MoldStud Research Team. 2025. Mastering CSS3 Transitions – A Comprehensive Guide for Advanced Developers. [Online]. Available at: https://moldstud.com/articles/p-mastering-css3-transitions-a-comprehensive-guide-for-advanced-developers
  (Accessed: 3 November 2025).
 
