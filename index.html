@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Green Basket - Home</title>
+  <meta name="description" content="The Green Basket - Fresh organic groceries in South Africa. 100% organic produce, dairy, bakery items from local farmers. Sustainable, healthy living.">
+  <meta name="keywords" content="organic groceries, fresh produce, South Africa, local farmers, healthy food, sustainable living, organic milk, fresh vegetables, KwaZulu-Natal">
+  <title>The Green Basket | Fresh Organic Groceries & Local Produce</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
 </head>
 <body>
   <header>
@@ -20,39 +23,65 @@
   </header>
 
   <main>
-    <h2>Fresh. Organic. Local.</h2>
-    <p class="welcome">
-      Welcome to <strong>The Green Basket</strong>, your trusted organic grocery store in South Africa.
-      We are committed to bringing you the freshest <em>organic produce, dairy, bakery, and pantry goods</em>,
-      all ethically sourced from local farmers.
-    </p>
+    <section class="hero fade-in">
+      <h2>Fresh. Organic. Local.</h2>
+      <p class="welcome">
+        Welcome to <strong>The Green Basket</strong>, your trusted organic grocery store in South Africa.
+        We are committed to bringing you the freshest <em>organic produce, dairy, bakery, and pantry goods</em>,
+        all ethically sourced from local farmers.
+      </p>
+    </section>
 
-    <h2>Why Shop With Us?</h2>
-    <ul>
-      <li>100% Organic Produce grown without harmful chemicals</li>
-      <li>Supporting Local Farmers and Communities</li>
-      <li>Affordable Weekly Specials and Promotions</li>
-      <li>Recipes, Tips, and Blogs on Sustainable Living</li>
-    </ul>
+    <section class="features fade-in">
+      <h2>Why Shop With Us?</h2>
+      <ul>
+        <li>100% Organic Produce grown without harmful chemicals</li>
+        <li>Supporting Local Farmers and Communities</li>
+        <li>Affordable Weekly Specials and Promotions</li>
+        <li>Recipes, Tips, and Blogs on Sustainable Living</li>
+      </ul>
+    </section>
 
-    <h2>Weekly Specials</h2>
-    <table>
-      <tr><th>Product</th><th>Price</th></tr>
-      <tr><td>Fresh Broccoli</td><td>R20 per bunch</td></tr>
-      <tr><td>Vine Tomatoes</td><td>R15 per pack</td></tr>
-      <tr><td>Organic Milk</td><td>R25 per litre</td></tr>
-      <tr><td>Wholegrain Bread</td><td>R18 per loaf</td></tr>
-    </table>
+    <section class="specials fade-in">
+      <h2>Weekly Specials</h2>
+      <div class="specials-container">
+        <table>
+          <tr><th>Product</th><th>Price</th></tr>
+          <tr><td>Fresh Broccoli</td><td>R20 per bunch</td></tr>
+          <tr><td>Vine Tomatoes</td><td>R15 per pack</td></tr>
+          <tr><td>Organic Milk</td><td>R25 per litre</td></tr>
+          <tr><td>Wholegrain Bread</td><td>R18 per loaf</td></tr>
+        </table>
+      </div>
+    </section>
 
-    <blockquote>
-      “The Green Basket changed how my family eats fresh, healthy, and affordable!”
-      – Happy Customer, Durban
-    </blockquote>
+    <section class="testimonial fade-in">
+      <blockquote>
+        "The Green Basket changed how my family eats fresh, healthy, and affordable!"
+        – Happy Customer, Durban
+      </blockquote>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter fade-in">
+      <h3>Stay Updated</h3>
+      <form id="newsletterForm">
+        <label for="newsletter-email">Email for weekly specials:</label>
+        <input type="email" id="newsletter-email" name="newsletter-email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div id="newsletter-message"></div>
+    </section>
   </main>
 
   <footer>
     <hr>
     <p>&copy; 2025 The Green Basket | Kwazulu-Natal, South Africa</p>
   </footer>
+
+  <!-- JavaScript Files -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/forms.js"></script>
 </body>
 </html>

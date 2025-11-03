@@ -356,3 +356,566 @@ iframe {
     height: 250px; /* reduce map height */
   }
 }
+/* ================================
+   BACK TO TOP BUTTON
+   ================================ */
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #4e944f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+
+#backToTop:hover {
+  background: #2d572c;
+  transform: translateY(-3px);
+}
+
+/* ================================
+   ACTIVE NAV LINK
+   ================================ */
+nav a.active {
+  color: #90ee90;
+  border-bottom: 2px solid #90ee90;
+}
+
+/* ================================
+   PRODUCT SEARCH
+   ================================ */
+#productSearch {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #d9fdd3;
+  margin: 1rem auto 2rem;
+  display: block;
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+/* ================================
+   PRODUCT MODAL
+   ================================ */
+#productModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.modal-content {
+  background: rgba(255,255,255,0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+  max-width: 500px;
+  width: 90%;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+#modalImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+#closeModal {
+  float: right;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+#closeModal:hover {
+  color: #90ee90;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+/* =======================================
+   BUTTONS & LINKS HOVER TRANSITIONS
+   ======================================= */
+button,
+input[type="submit"],
+a.button {
+  background: #4e944f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+button:hover,
+input[type="submit"]:hover,
+a.button:hover {
+  background: #2d572c;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* =======================================
+   NAVIGATION MENU EFFECTS
+   ======================================= */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+  color: #90ee90;
+  transform: scale(1.05);
+}
+
+/* =======================================
+   PRODUCT CARD HOVER ANIMATION
+   ======================================= */
+.product-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+  color: #fff;
+  transition: all 0.4s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.product-card img {
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+/* =======================================
+   PAGE SECTIONS FADE-IN ANIMATION
+   ======================================= */
+section, .product-card {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =======================================
+   BACK TO TOP BUTTON HOVER EFFECT
+   ======================================= */
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #4e944f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+
+#backToTop:hover {
+  background: #2d572c;
+  transform: translateY(-3px);
+}
+
+/* =======================================
+   MODAL ANIMATION
+   ======================================= */
+#productModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  animation: fadeIn 0.4s ease;
+}
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+  max-width: 500px;
+  width: 90%;
+  transform: scale(0.95);
+  animation: popIn 0.4s ease forwards;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* =======================================
+   FOOTER HOVER EFFECTS
+   ======================================= */
+footer a {
+  color: #90ee90;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #fff;
+}
+/* ================================
+   PART 3 ENHANCEMENTS
+   ================================ */
+
+/* Search and Filter Styles */
+.search-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.search-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 250px;
+    padding: 0.75rem;
+    border: 1px solid #d9fdd3;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+}
+
+.category-filter {
+    padding: 0.75rem;
+    border: 1px solid #d9fdd3;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+}
+
+.clear-btn {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.clear-btn:hover {
+    background: #5a6268;
+}
+
+.search-results {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #d9fdd3;
+}
+
+/* Product Grid Enhancements */
+.product-grid {
+    overflow-x: auto;
+}
+
+.product-img {
+    max-width: 80px;
+    height: auto;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.product-img:hover {
+    transform: scale(1.05);
+}
+
+/* Form Enhancement Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.error-message {
+    display: none;
+    color: #ff6b6b;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+.radio-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+    margin: 0;
+}
+
+.form-message {
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.form-message.success {
+    background: rgba(46, 139, 87, 0.2);
+    color: #d9fdd3;
+    border: 1px solid #4e944f;
+}
+
+.form-message.error {
+    background: rgba(255, 107, 107, 0.2);
+    color: #ff6b6b;
+    border: 1px solid #ff6b6b;
+}
+
+/* Lightbox Customization */
+.lightbox-overlay {
+    background: rgba(0, 0, 0, 0.9) !important;
+}
+
+.lightbox-container {
+    background: transparent !important;
+}
+
+.lightbox-image {
+    border-radius: 8px;
+}
+
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Loading States */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    nav {
+        flex-direction: column;
+    }
+    
+    .search-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-input, .category-filter {
+        min-width: auto;
+    }
+}
+
+/* Back to Top Button */
+.back-to-top {
+    transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+    background: #4e944f !important;
+    transform: translateY(-2px);
+}
+
+/* Enquiry Summary */
+.enquiry-summary {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    border-left: 4px solid #4e944f;
+}
+
+.new-enquiry-btn {
+    background: #2d572c;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.new-enquiry-btn:hover {
+    background: #4e944f;
+}
+/* ================================
+   INTERACTIVE MAPS ENHANCEMENTS
+   ================================ */
+
+.map-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.map-btn {
+    background: #2d572c;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.map-btn:hover {
+    background: #4e944f;
+    transform: translateY(-2px);
+}
+
+.map-instructions {
+    display: none;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+    border-left: 4px solid #4e944f;
+}
+
+.directions-info, .location-info, .route-details {
+    color: #d9fdd3;
+}
+
+.directions-link {
+    color: #4e944f;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.directions-link:hover {
+    text-decoration: underline;
+}
+
+.route-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.route-btn:hover {
+    background: #0056b3;
+}
+
+/* Leaflet Map Customization */
+.leaflet-container {
+    background: #2c3e50;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.leaflet-popup-content {
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.leaflet-control-zoom a {
+    background: #2d572c;
+    color: white;
+    border: none;
+}
+
+.leaflet-control-zoom a:hover {
+    background: #4e944f;
+}

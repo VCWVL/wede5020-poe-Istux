@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"> <!-- Defines character encoding -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes page responsive -->
-  <title>Enquiry - The Green Basket</title> <!-- Page title -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enquire about organic products, volunteering, or sponsorship at The Green Basket. Get information on pricing, availability and partnerships.">
+  <meta name="keywords" content="product enquiry, volunteer opportunities, sponsorship, organic products pricing, availability, partnerships">
+  <title>Product Enquiry & Partnerships | The Green Basket</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Header with site title and navigation menu -->
   <header>
     <h1>The Green Basket</h1>
     <nav>
@@ -20,36 +21,113 @@
     <hr>
   </header>
 
-  <!-- Main content with enquiry form -->
   <main>
     <h2>Enquiry Form</h2>
-    <p>Please complete the form below and we will get back to you shortly:</p>
-    <form>
+    <p>Please complete the form below and we will get back to you shortly with pricing, availability, or partnership information:</p>
+    
+    <form id="enquiryForm" action="#" method="post">
       <!-- Name input -->
-      <label for="name">Full Name:</label>
-      <input type="text" id="name" name="name">
+      <div class="form-group">
+        <label for="name">Full Name: *</label>
+        <input type="text" id="name" name="name" required minlength="2" maxlength="50">
+        <span class="error-message" id="nameError"></span>
+      </div>
 
       <!-- Email input -->
-      <label for="email">Email Address:</label>
-      <input type="email" id="email" name="email">
+      <div class="form-group">
+        <label for="email">Email Address: *</label>
+        <input type="email" id="email" name="email" required>
+        <span class="error-message" id="emailError"></span>
+      </div>
 
       <!-- Phone input -->
-      <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="phone">
+      <div class="form-group">
+        <label for="phone">Phone Number: *</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="10-digit number">
+        <span class="error-message" id="phoneError"></span>
+      </div>
+
+      <!-- Enquiry Type -->
+      <div class="form-group">
+        <label for="enquiryType">Enquiry Type: *</label>
+        <select id="enquiryType" name="enquiryType" required>
+          <option value="">Please select</option>
+          <option value="product">Product Information & Pricing</option>
+          <option value="volunteer">Volunteer Opportunities</option>
+          <option value="sponsorship">Sponsorship/Partnership</option>
+          <option value="wholesale">Wholesale/Bulk Orders</option>
+          <option value="other">Other</option>
+        </select>
+        <span class="error-message" id="enquiryTypeError"></span>
+      </div>
+
+      <!-- Product Selection (dynamic) -->
+      <div class="form-group" id="productSelection" style="display: none;">
+        <label for="product">Product of Interest:</label>
+        <select id="product" name="product">
+          <option value="">Select a product</option>
+          <option value="apples">Apples</option>
+          <option value="bananas">Bananas</option>
+          <option value="carrots">Carrots</option>
+          <!-- Add all products -->
+        </select>
+      </div>
+
+      <!-- Quantity -->
+      <div class="form-group" id="quantityGroup" style="display: none;">
+        <label for="quantity">Estimated Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" placeholder="e.g., 10">
+        <select id="quantityUnit" name="quantityUnit">
+          <option value="kg">kg</option>
+          <option value="units">units</option>
+          <option value="liters">liters</option>
+        </select>
+      </div>
 
       <!-- Enquiry message -->
-      <label for="message">Your Enquiry:</label>
-      <textarea id="message" name="message" rows="5"></textarea>
+      <div class="form-group">
+        <label for="message">Your Enquiry: *</label>
+        <textarea id="message" name="message" rows="5" required minlength="10" maxlength="1000" placeholder="Please provide details about your enquiry..."></textarea>
+        <span class="error-message" id="messageError"></span>
+      </div>
+
+      <!-- Preferred Contact Method -->
+      <div class="form-group">
+        <label>Preferred Contact Method:</label>
+        <div class="radio-group">
+          <input type="radio" id="contactEmail" name="contactMethod" value="email" checked>
+          <label for="contactEmail">Email</label>
+          
+          <input type="radio" id="contactPhone" name="contactMethod" value="phone">
+          <label for="contactPhone">Phone</label>
+          
+          <input type="radio" id="contactEither" name="contactMethod" value="either">
+          <label for="contactEither">Either</label>
+        </div>
+      </div>
 
       <!-- Submit button -->
-      <input type="submit" value="Submit">
+      <div class="form-group">
+        <button type="submit" id="submitBtn">Submit Enquiry</button>
+        <div id="formMessage" class="form-message"></div>
+      </div>
     </form>
+
+    <!-- Enquiry Summary (displayed after submission) -->
+    <div id="enquirySummary" class="enquiry-summary" style="display: none;">
+      <h3>Enquiry Summary</h3>
+      <div id="summaryContent"></div>
+      <button id="newEnquiry" class="new-enquiry-btn">Submit Another Enquiry</button>
+    </div>
   </main>
 
-  <!-- Footer section -->
   <footer>
     <hr>
     <p>&copy; 2025 The Green Basket | Kwazulu-Natal, South Africa</p>
   </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/enquiry.js"></script>
 </body>
 </html>

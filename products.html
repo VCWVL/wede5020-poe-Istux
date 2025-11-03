@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Browse our range of organic products at The Green Basket. Fresh produce, dairy, bakery, and pantry items.">
-  <title>Products - The Green Basket</title>
+  <meta name="description" content="Browse organic products at The Green Basket. Fresh produce, dairy, bakery, pantry items. Search and filter our extensive organic collection.">
+  <meta name="keywords" content="organic products, fresh produce, dairy, bakery, pantry, organic vegetables, fruits, search products, filter products">
+  <title>Organic Products | Fresh Produce, Dairy & Bakery - The Green Basket</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
 </head>
 <body>
   <header>
@@ -23,118 +25,327 @@
   <main>
     <h2>Our Organic Products</h2>
 
+    <!-- Search and Filter Section -->
+    <section class="search-section">
+      <div class="search-container">
+        <input type="text" id="productSearch" placeholder="Search products... (e.g., apples, milk, bread)" class="search-input">
+        <select id="categoryFilter" class="category-filter">
+          <option value="all">All Categories</option>
+          <option value="produce">Fresh Produce</option>
+          <option value="dairy">Dairy</option>
+          <option value="bakery">Bakery</option>
+          <option value="pantry">Pantry</option>
+        </select>
+        <button id="clearSearch" class="clear-btn">Clear</button>
+      </div>
+      <div id="searchResults" class="search-results"></div>
+    </section>
 
-    <!-- Fresh Produce -->
-    <section>
+    <!-- Fresh Produce - ALL YOUR ORIGINAL PRODUCTS -->
+    <section class="product-category" data-category="produce">
       <h3>Fresh Produce</h3>
-      <table>
+      <table id="produceTable">
         <tr>
           <th scope="col">Product</th>
           <th scope="col">Image</th>
           <th scope="col">Price</th>
         </tr>
-        <tr><td>Apples (per kg)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\apples.jpg" alt="Apples"></td><td>R30</td></tr>
-        <tr><td>Bananas (per kg)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\bananas.jpg" alt="Bananas"></td><td>R25</td></tr>
-        <tr><td>Carrots (per kg)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\carrots.jpg" alt="Carrots"></td><td>R20</td></tr>
-        <tr><td>Spinach (per bunch)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\spinach.jpg" alt="Spinach"></td><td>R15</td></tr>
-        <tr><td>Potatoes (5kg bag)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\potatoes.jpg" alt="Potatoes"></td><td>R50</td></tr>
-        <tr><td>Tomatoes (per kg)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\tomatoes.jpg" alt="Tomatoes"></td><td>R28</td></tr>
-        <tr><td>Cucumbers (per kg)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\cucumbers.jpg" alt="Cucumbers"></td><td>R22</td></tr>
-        <tr><td>Bell Peppers (per kg)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\bell papers.jpg" alt="Bell Peppers"></td><td>R35</td></tr>
-        <tr><td>Strawberries (250g)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\strawberries.jpg" alt="Strawberries"></td><td>R40</td></tr>
-        <tr><td>Blueberries (125g)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\blueberries.jpg" alt="Blueberries"></td><td>R45</td></tr>
-        <tr><td>Red Cabbage (per kg)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\red cabbage.jpg" alt="Red Cabbage"></td><td>R28</td></tr>
-        <tr><td>Cauliflower (per head)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\cauliflower.jpg" alt="Cauliflower"></td><td>R35</td></tr>
-        <tr><td>Beetroots (per kg)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\beetroot.jpg" alt="Beetroots"></td><td>R25</td></tr>
-        <tr><td>Green Beans (per kg)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\green beans.jpg" alt="Green Beans"></td><td>R30</td></tr>
-        <tr><td>Sweet Potatoes (per kg)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\sweet potetoes.jpg" alt="Sweet Potatoes"></td><td>R32</td></tr>
-        <tr><td>Zucchini (per kg)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\zucchini.jpg" alt="Zucchini"></td><td>R27</td></tr>
-        <tr><td>Eggplant (per kg)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\egg plant.jpg" alt="Eggplant"></td><td>R33</td></tr>
-        <tr><td>Butternut Squash (per kg)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\butternut squash.jpg" alt="Butternut Squash"></td><td>R38</td></tr>
-        <tr><td>Kale (per bunch)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\kale.jpg" alt="Kale"></td><td>R18</td></tr>
-        <tr><td>Fresh Ginger (per 100g)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart1\images\ginger.jpg" alt="Fresh Ginger"></td><td>R15</td></tr>
-        <tr><td>Brussels Sprouts (per kg)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\brussels sprout.jpg" alt="Brussels Sprouts"></td><td>R40</td></tr>
-        <tr><td>Leeks (per kg)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\leeks.jpg" alt="Leeks"></td><td>R30</td></tr>
-        <tr><td>Parsnips (per kg)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\parshnips.jpg" alt="Parsnips"></td><td>R28</td></tr>
-        <tr><td>Avocados (each)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\avocados.jpg" alt="Avocado"></td><td>R20</td></tr>
-        <tr><td>Green Onions (per bunch)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\green onions.jpg" alt="Green Onions"></td><td>R12</td></tr>
-        <tr><td>Mushrooms (250g)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\mushrooms.jpg" alt="Mushrooms"></td><td>R25</td></tr>
+        <tr data-name="apples" data-category="produce">
+          <td>Apples (per kg)</td>
+          <td><a href="images/apples.jpg" data-lightbox="produce" data-title="Fresh Organic Apples - R30/kg"><img src="images/apples.jpg" alt="Fresh organic red and green apples" class="product-img"></a></td>
+          <td>R30</td>
+        </tr>
+        <tr data-name="bananas" data-category="produce">
+          <td>Bananas (per kg)</td>
+          <td><a href="images/bananas.jpg" data-lightbox="produce" data-title="Organic Bananas - R25/kg"><img src="images/bananas.jpg" alt="Fresh organic yellow bananas" class="product-img"></a></td>
+          <td>R25</td>
+        </tr>
+        <tr data-name="carrots" data-category="produce">
+          <td>Carrots (per kg)</td>
+          <td><a href="images/carrots.jpg" data-lightbox="produce" data-title="Organic Carrots - R20/kg"><img src="images/carrots.jpg" alt="Fresh organic orange carrots" class="product-img"></a></td>
+          <td>R20</td>
+        </tr>
+        <tr data-name="spinach" data-category="produce">
+          <td>Spinach (per bunch)</td>
+          <td><a href="images/spinach.jpg" data-lightbox="produce" data-title="Fresh Spinach - R15/bunch"><img src="images/spinach.jpg" alt="Fresh organic spinach leaves" class="product-img"></a></td>
+          <td>R15</td>
+        </tr>
+        <tr data-name="potatoes" data-category="produce">
+          <td>Potatoes (5kg bag)</td>
+          <td><a href="images/potatoes.jpg" data-lightbox="produce" data-title="Organic Potatoes - R50/5kg"><img src="images/potatoes.jpg" alt="Fresh organic potatoes" class="product-img"></a></td>
+          <td>R50</td>
+        </tr>
+        <tr data-name="tomatoes" data-category="produce">
+          <td>Tomatoes (per kg)</td>
+          <td><a href="images/tomatoes.jpg" data-lightbox="produce" data-title="Vine Tomatoes - R28/kg"><img src="images/tomatoes.jpg" alt="Fresh organic vine tomatoes" class="product-img"></a></td>
+          <td>R28</td>
+        </tr>
+        <tr data-name="cucumbers" data-category="produce">
+          <td>Cucumbers (per kg)</td>
+          <td><a href="images/cucumbers.jpg" data-lightbox="produce" data-title="Fresh Cucumbers - R22/kg"><img src="images/cucumbers.jpg" alt="Fresh organic cucumbers" class="product-img"></a></td>
+          <td>R22</td>
+        </tr>
+        <tr data-name="bell peppers" data-category="produce">
+          <td>Bell Peppers (per kg)</td>
+          <td><a href="images/bell papers.jpg" data-lightbox="produce" data-title="Bell Peppers - R35/kg"><img src="images/bell papers.jpg" alt="Fresh organic bell peppers in multiple colors" class="product-img"></a></td>
+          <td>R35</td>
+        </tr>
+        <tr data-name="strawberries" data-category="produce">
+          <td>Strawberries (250g)</td>
+          <td><a href="images/strawberries.jpg" data-lightbox="produce" data-title="Fresh Strawberries - R40/250g"><img src="images/strawberries.jpg" alt="Fresh organic strawberries" class="product-img"></a></td>
+          <td>R40</td>
+        </tr>
+        <tr data-name="blueberries" data-category="produce">
+          <td>Blueberries (125g)</td>
+          <td><a href="images/blueberries.jpg" data-lightbox="produce" data-title="Blueberries - R45/125g"><img src="images/blueberries.jpg" alt="Fresh organic blueberries" class="product-img"></a></td>
+          <td>R45</td>
+        </tr>
+        <tr data-name="red cabbage" data-category="produce">
+          <td>Red Cabbage (per kg)</td>
+          <td><a href="images/red cabbage.jpg" data-lightbox="produce" data-title="Red Cabbage - R28/kg"><img src="images/red cabbage.jpg" alt="Fresh organic red cabbage" class="product-img"></a></td>
+          <td>R28</td>
+        </tr>
+        <tr data-name="cauliflower" data-category="produce">
+          <td>Cauliflower (per head)</td>
+          <td><a href="images/cauliflower.jpg" data-lightbox="produce" data-title="Cauliflower - R35/head"><img src="images/cauliflower.jpg" alt="Fresh organic cauliflower" class="product-img"></a></td>
+          <td>R35</td>
+        </tr>
+        <tr data-name="beetroots" data-category="produce">
+          <td>Beetroots (per kg)</td>
+          <td><a href="images/beetroot.jpg" data-lightbox="produce" data-title="Beetroots - R25/kg"><img src="images/beetroot.jpg" alt="Fresh organic beetroots" class="product-img"></a></td>
+          <td>R25</td>
+        </tr>
+        <tr data-name="green beans" data-category="produce">
+          <td>Green Beans (per kg)</td>
+          <td><a href="images/green beans.jpg" data-lightbox="produce" data-title="Green Beans - R30/kg"><img src="images/green beans.jpg" alt="Fresh organic green beans" class="product-img"></a></td>
+          <td>R30</td>
+        </tr>
+        <tr data-name="sweet potatoes" data-category="produce">
+          <td>Sweet Potatoes (per kg)</td>
+          <td><a href="images/sweet potetoes.jpg" data-lightbox="produce" data-title="Sweet Potatoes - R32/kg"><img src="images/sweet potetoes.jpg" alt="Fresh organic sweet potatoes" class="product-img"></a></td>
+          <td>R32</td>
+        </tr>
+        <tr data-name="zucchini" data-category="produce">
+          <td>Zucchini (per kg)</td>
+          <td><a href="images/zucchini.jpg" data-lightbox="produce" data-title="Zucchini - R27/kg"><img src="images/zucchini.jpg" alt="Fresh organic zucchini" class="product-img"></a></td>
+          <td>R27</td>
+        </tr>
+        <tr data-name="eggplant" data-category="produce">
+          <td>Eggplant (per kg)</td>
+          <td><a href="images/egg plant.jpg" data-lightbox="produce" data-title="Eggplant - R33/kg"><img src="images/egg plant.jpg" alt="Fresh organic eggplant" class="product-img"></a></td>
+          <td>R33</td>
+        </tr>
+        <tr data-name="butternut squash" data-category="produce">
+          <td>Butternut Squash (per kg)</td>
+          <td><a href="images/butternut squash.jpg" data-lightbox="produce" data-title="Butternut Squash - R38/kg"><img src="images/butternut squash.jpg" alt="Fresh organic butternut squash" class="product-img"></a></td>
+          <td>R38</td>
+        </tr>
+        <tr data-name="kale" data-category="produce">
+          <td>Kale (per bunch)</td>
+          <td><a href="images/kale.jpg" data-lightbox="produce" data-title="Fresh Kale - R18/bunch"><img src="images/kale.jpg" alt="Fresh organic kale leaves" class="product-img"></a></td>
+          <td>R18</td>
+        </tr>
+        <tr data-name="fresh ginger" data-category="produce">
+          <td>Fresh Ginger (per 100g)</td>
+          <td><a href="images/ginger.jpg" data-lightbox="produce" data-title="Fresh Ginger - R15/100g"><img src="images/ginger.jpg" alt="Fresh organic ginger root" class="product-img"></a></td>
+          <td>R15</td>
+        </tr>
+        <tr data-name="brussels sprouts" data-category="produce">
+          <td>Brussels Sprouts (per kg)</td>
+          <td><a href="images/brussels sprout.jpg" data-lightbox="produce" data-title="Brussels Sprouts - R40/kg"><img src="images/brussels sprout.jpg" alt="Fresh organic brussels sprouts" class="product-img"></a></td>
+          <td>R40</td>
+        </tr>
+        <tr data-name="leeks" data-category="produce">
+          <td>Leeks (per kg)</td>
+          <td><a href="images/leeks.jpg" data-lightbox="produce" data-title="Fresh Leeks - R30/kg"><img src="images/leeks.jpg" alt="Fresh organic leeks" class="product-img"></a></td>
+          <td>R30</td>
+        </tr>
+        <tr data-name="parsnips" data-category="produce">
+          <td>Parsnips (per kg)</td>
+          <td><a href="images/parshnips.jpg" data-lightbox="produce" data-title="Parsnips - R28/kg"><img src="images/parshnips.jpg" alt="Fresh organic parsnips" class="product-img"></a></td>
+          <td>R28</td>
+        </tr>
+        <tr data-name="avocados" data-category="produce">
+          <td>Avocados (each)</td>
+          <td><a href="images/avocados.jpg" data-lightbox="produce" data-title="Fresh Avocados - R20/each"><img src="images/avocados.jpg" alt="Fresh organic avocados" class="product-img"></a></td>
+          <td>R20</td>
+        </tr>
+        <tr data-name="green onions" data-category="produce">
+          <td>Green Onions (per bunch)</td>
+          <td><a href="images/green onions.jpg" data-lightbox="produce" data-title="Green Onions - R12/bunch"><img src="images/green onions.jpg" alt="Fresh organic green onions" class="product-img"></a></td>
+          <td>R12</td>
+        </tr>
+        <tr data-name="mushrooms" data-category="produce">
+          <td>Mushrooms (250g)</td>
+          <td><a href="images/mushrooms.jpg" data-lightbox="produce" data-title="Fresh Mushrooms - R25/250g"><img src="images/mushrooms.jpg" alt="Fresh organic mushrooms" class="product-img"></a></td>
+          <td>R25</td>
+        </tr>
       </table>
     </section>
 
-    <!-- Dairy -->
-    <section>
+    <!-- Dairy - ALL YOUR ORIGINAL PRODUCTS -->
+    <section class="product-category" data-category="dairy">
       <h3>Dairy</h3>
-      <table>
+      <table id="dairyTable">
         <tr>
           <th scope="col">Product</th>
           <th scope="col">Image</th>
           <th scope="col">Price</th>
         </tr>
-        <tr><td>Organic Milk (1L)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\milk.jpg" alt="Organic Milk"></td><td>R25</td></tr>
-        <tr><td>Cheddar Cheese (250g)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\cheeese.jpg" alt="Cheddar Cheese"></td><td>R40</td></tr>
-        <tr><td>Yogurt (500ml)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\yogurt.jpg" alt="Yogurt"></td><td>R30</td></tr>
-        <tr><td>Butter (250g)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\butter.jpg" alt="Butter"></td><td>R35</td></tr>
-        <tr><td>Organic Eggs (12 pack)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\eggs.jpg" alt="Organic Eggs"></td><td>R50</td></tr>
+        <tr data-name="organic milk" data-category="dairy">
+          <td>Organic Milk (1L)</td>
+          <td><a href="images/milk.jpg" data-lightbox="dairy" data-title="Organic Milk - R25/L"><img src="images/milk.jpg" alt="Fresh organic milk in glass bottle" class="product-img"></a></td>
+          <td>R25</td>
+        </tr>
+        <tr data-name="cheddar cheese" data-category="dairy">
+          <td>Cheddar Cheese (250g)</td>
+          <td><a href="images/cheeese.jpg" data-lightbox="dairy" data-title="Cheddar Cheese - R40/250g"><img src="images/cheeese.jpg" alt="Organic cheddar cheese block" class="product-img"></a></td>
+          <td>R40</td>
+        </tr>
+        <tr data-name="yogurt" data-category="dairy">
+          <td>Yogurt (500ml)</td>
+          <td><a href="images/yogurt.jpg" data-lightbox="dairy" data-title="Organic Yogurt - R30/500ml"><img src="images/yogurt.jpg" alt="Creamy organic yogurt" class="product-img"></a></td>
+          <td>R30</td>
+        </tr>
+        <tr data-name="butter" data-category="dairy">
+          <td>Butter (250g)</td>
+          <td><a href="images/butter.jpg" data-lightbox="dairy" data-title="Organic Butter - R35/250g"><img src="images/butter.jpg" alt="Organic butter block" class="product-img"></a></td>
+          <td>R35</td>
+        </tr>
+        <tr data-name="organic eggs" data-category="dairy">
+          <td>Organic Eggs (12 pack)</td>
+          <td><a href="images/eggs.jpg" data-lightbox="dairy" data-title="Organic Eggs - R50/12 pack"><img src="images/eggs.jpg" alt="Fresh organic eggs in carton" class="product-img"></a></td>
+          <td>R50</td>
+        </tr>
       </table>
     </section>
 
-    <!-- Bakery -->
-    <section>
+    <!-- Bakery - ALL YOUR ORIGINAL PRODUCTS -->
+    <section class="product-category" data-category="bakery">
       <h3>Bakery</h3>
-      <table>
+      <table id="bakeryTable">
         <tr>
           <th scope="col">Product</th>
           <th scope="col">Image</th>
           <th scope="col">Price</th>
         </tr>
-        <tr><td>Wholegrain Bread</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\bread.jpg" alt="Wholegrain Bread"></td><td>R18</td></tr>
-        <tr><td>Brown Rolls (6 pack)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\brown rolls.jpg" alt="Brown Rolls"></td><td>R22</td></tr>
-        <tr><td>Gluten-Free Bread</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\gluten free bread.jpg" alt="Gluten-Free Bread"></td><td>R35</td></tr>
-        <tr><td>Organic Croissants (4 pack)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\croissant.jpg" alt="Organic Croissants"></td><td>R40</td></tr>
-        <tr><td>Wholemeal Buns (6 pack)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\whole meal buns.jpg" alt="Wholemeal Buns"></td><td>R25</td></tr>
+        <tr data-name="wholegrain bread" data-category="bakery">
+          <td>Wholegrain Bread</td>
+          <td><a href="images/bread.jpg" data-lightbox="bakery" data-title="Wholegrain Bread - R18/loaf"><img src="images/bread.jpg" alt="Fresh wholegrain bread loaf" class="product-img"></a></td>
+          <td>R18</td>
+        </tr>
+        <tr data-name="brown rolls" data-category="bakery">
+          <td>Brown Rolls (6 pack)</td>
+          <td><a href="images/brown rolls.jpg" data-lightbox="bakery" data-title="Brown Rolls - R22/6 pack"><img src="images/brown rolls.jpg" alt="Fresh brown rolls" class="product-img"></a></td>
+          <td>R22</td>
+        </tr>
+        <tr data-name="gluten free bread" data-category="bakery">
+          <td>Gluten-Free Bread</td>
+          <td><a href="images/gluten free bread.jpg" data-lightbox="bakery" data-title="Gluten-Free Bread - R35/loaf"><img src="images/gluten free bread.jpg" alt="Gluten-free bread loaf" class="product-img"></a></td>
+          <td>R35</td>
+        </tr>
+        <tr data-name="organic croissants" data-category="bakery">
+          <td>Organic Croissants (4 pack)</td>
+          <td><a href="images/croissant.jpg" data-lightbox="bakery" data-title="Organic Croissants - R40/4 pack"><img src="images/croissant.jpg" alt="Fresh organic croissants" class="product-img"></a></td>
+          <td>R40</td>
+        </tr>
+        <tr data-name="wholemeal buns" data-category="bakery">
+          <td>Wholemeal Buns (6 pack)</td>
+          <td><a href="images/whole meal buns.jpg" data-lightbox="bakery" data-title="Wholemeal Buns - R25/6 pack"><img src="images/whole meal buns.jpg" alt="Fresh wholemeal buns" class="product-img"></a></td>
+          <td>R25</td>
+        </tr>
       </table>
     </section>
 
-    <!-- Pantry -->
-    <section>
+    <!-- Pantry - ALL YOUR ORIGINAL PRODUCTS -->
+    <section class="product-category" data-category="pantry">
       <h3>Pantry</h3>
-      <table>
+      <table id="pantryTable">
         <tr>
           <th scope="col">Product</th>
           <th scope="col">Image</th>
           <th scope="col">Price</th>
         </tr>
-        <tr><td>Organic Rice (1kg)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\rice.jpg" alt="Organic Rice"></td><td>R40</td></tr>
-        <tr><td>Brown Lentils (500g)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\lentils.jpg" alt="Brown Lentils"></td><td>R30</td></tr>
-        <tr><td>Raw Honey (500g)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\honey.jpg" alt="Raw Honey"></td><td>R65</td></tr>
-        <tr><td>Herbal Tea (20 bags)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\herbal tea.jpg" alt="Herbal Tea"></td><td>R45</td></tr>
-        <tr><td>Organic Quinoa (500g)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\quinoa.jpg" alt="Organic Quinoa"></td><td>R55</td></tr>
-        <tr><td>Chia Seeds (250g)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\chia seeds.jpg" alt="Chia Seeds"></td><td>R60</td></tr>
-        <tr><td>Almond Butter (250g)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\almond butter.jpg" alt="Almond Butter"></td><td>R75</td></tr>
-        <tr><td>Oats (1kg)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\oats.jpg" alt="Oats"></td><td>R45</td></tr>
-        <tr><td>Coconut Oil (500ml)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\coconut oil.jpg" alt="Coconut Oil"></td><td>R80</td></tr>
-        <tr><td>Organic Peanut Butter (250g)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\organic peanut butter.jpg" alt="Organic Peanut Butter"></td><td>R70</td></tr>
-        <tr><td>Flax Seeds (250g)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\flax seeds.jpg" alt="Flax Seeds"></td><td>R55</td></tr>
-        <tr><td>Whole Wheat Pasta (500g)</td><td><img src="C:\Users\istiy\OneDrive\Desktop\HAW1\WEDE\wedePart2\images\pasta.jpg" alt="Whole Wheat Pasta"></td><td>R40</td></tr>
+        <tr data-name="organic rice" data-category="pantry">
+          <td>Organic Rice (1kg)</td>
+          <td><a href="images/rice.jpg" data-lightbox="pantry" data-title="Organic Rice - R40/kg"><img src="images/rice.jpg" alt="Organic rice grains" class="product-img"></a></td>
+          <td>R40</td>
+        </tr>
+        <tr data-name="brown lentils" data-category="pantry">
+          <td>Brown Lentils (500g)</td>
+          <td><a href="images/lentils.jpg" data-lightbox="pantry" data-title="Brown Lentils - R30/500g"><img src="images/lentils.jpg" alt="Organic brown lentils" class="product-img"></a></td>
+          <td>R30</td>
+        </tr>
+        <tr data-name="raw honey" data-category="pantry">
+          <td>Raw Honey (500g)</td>
+          <td><a href="images/honey.jpg" data-lightbox="pantry" data-title="Raw Honey - R65/500g"><img src="images/honey.jpg" alt="Pure raw honey" class="product-img"></a></td>
+          <td>R65</td>
+        </tr>
+        <tr data-name="herbal tea" data-category="pantry">
+          <td>Herbal Tea (20 bags)</td>
+          <td><a href="images/herbal tea.jpg" data-lightbox="pantry" data-title="Herbal Tea - R45/20 bags"><img src="images/herbal tea.jpg" alt="Organic herbal tea bags" class="product-img"></a></td>
+          <td>R45</td>
+        </tr>
+        <tr data-name="organic quinoa" data-category="pantry">
+          <td>Organic Quinoa (500g)</td>
+          <td><a href="images/quinoa.jpg" data-lightbox="pantry" data-title="Organic Quinoa - R55/500g"><img src="images/quinoa.jpg" alt="Organic quinoa grains" class="product-img"></a></td>
+          <td>R55</td>
+        </tr>
+        <tr data-name="chia seeds" data-category="pantry">
+          <td>Chia Seeds (250g)</td>
+          <td><a href="images/chia seeds.jpg" data-lightbox="pantry" data-title="Chia Seeds - R60/250g"><img src="images/chia seeds.jpg" alt="Organic chia seeds" class="product-img"></a></td>
+          <td>R60</td>
+        </tr>
+        <tr data-name="almond butter" data-category="pantry">
+          <td>Almond Butter (250g)</td>
+          <td><a href="images/almond butter.jpg" data-lightbox="pantry" data-title="Almond Butter - R75/250g"><img src="images/almond butter.jpg" alt="Creamy almond butter" class="product-img"></a></td>
+          <td>R75</td>
+        </tr>
+        <tr data-name="oats" data-category="pantry">
+          <td>Oats (1kg)</td>
+          <td><a href="images/oats.jpg" data-lightbox="pantry" data-title="Organic Oats - R45/kg"><img src="images/oats.jpg" alt="Organic rolled oats" class="product-img"></a></td>
+          <td>R45</td>
+        </tr>
+        <tr data-name="coconut oil" data-category="pantry">
+          <td>Coconut Oil (500ml)</td>
+          <td><a href="images/coconut oil.jpg" data-lightbox="pantry" data-title="Coconut Oil - R80/500ml"><img src="images/coconut oil.jpg" alt="Organic coconut oil" class="product-img"></a></td>
+          <td>R80</td>
+        </tr>
+        <tr data-name="organic peanut butter" data-category="pantry">
+          <td>Organic Peanut Butter (250g)</td>
+          <td><a href="images/organic peanut butter.jpg" data-lightbox="pantry" data-title="Organic Peanut Butter - R70/250g"><img src="images/organic peanut butter.jpg" alt="Organic peanut butter" class="product-img"></a></td>
+          <td>R70</td>
+        </tr>
+        <tr data-name="flax seeds" data-category="pantry">
+          <td>Flax Seeds (250g)</td>
+          <td><a href="images/flax seeds.jpg" data-lightbox="pantry" data-title="Flax Seeds - R55/250g"><img src="images/flax seeds.jpg" alt="Organic flax seeds" class="product-img"></a></td>
+          <td>R55</td>
+        </tr>
+        <tr data-name="whole wheat pasta" data-category="pantry">
+          <td>Whole Wheat Pasta (500g)</td>
+          <td><a href="images/pasta.jpg" data-lightbox="pantry" data-title="Whole Wheat Pasta - R40/500g"><img src="images/pasta.jpg" alt="Organic whole wheat pasta" class="product-img"></a></td>
+          <td>R40</td>
+        </tr>
       </table>
     </section>
 
     <!-- Bottom Navigation -->
-<div class="bottom-nav" style="color: white;">
-  <a href="index.html" style="color: white;">Home</a> |
-  <a href="about.html" style="color: white;">About Us</a> |
-  <a href="products.html" style="color: white;">Products</a> |
-  <a href="enquiry.html" style="color: white;">Enquiry</a> |
-  <a href="contact.html" style="color: white;">Contact</a>
-</div>
-
-
+    <div class="bottom-nav" style="color: white;">
+      <a href="index.html" style="color: white;">Home</a> |
+      <a href="about.html" style="color: white;">About Us</a> |
+      <a href="products.html" style="color: white;">Products</a> |
+      <a href="enquiry.html" style="color: white;">Enquiry</a> |
+      <a href="contact.html" style="color: white;">Contact</a>
+    </div>
   </main>
 
   <footer>
     <hr>
     <p>&copy; 2025 The Green Basket | Kwazulu-Natal, South Africa</p>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/search.js"></script>
 </body>
 </html>
