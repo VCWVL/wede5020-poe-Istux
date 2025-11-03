@@ -3,7 +3,7 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 
-Sitemap: https://thegreenbasket.co.za/sitemap.xml
+Sitemap: /sitemap.xml
 
 # SEO Directives
 Crawl-delay: 1

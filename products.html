@@ -6,6 +6,12 @@
   <meta name="description" content="Browse organic products at The Green Basket. Fresh produce, dairy, bakery, pantry items. Search and filter our extensive organic collection.">
   <meta name="keywords" content="organic products, fresh produce, dairy, bakery, pantry, organic vegetables, fruits, search products, filter products">
   <title>Organic Products | Fresh Produce, Dairy & Bakery - The Green Basket</title>
+  <link rel="canonical" href="https://thegreenbasket.co.za/products.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Organic Products | The Green Basket">
+  <meta property="og:description" content="Browse organic produce, dairy, bakery and pantry items. Filter and sort products.">
+  <meta property="og:url" content="https://thegreenbasket.co.za/products.html">
+  <meta property="og:image" content="https://thegreenbasket.co.za/images/apples.jpg">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
 </head>
@@ -36,9 +42,16 @@
           <option value="bakery">Bakery</option>
           <option value="pantry">Pantry</option>
         </select>
+        <select id="sortBy" class="category-filter" aria-label="Sort products">
+          <option value="none">Sort: Default</option>
+          <option value="name-asc">Name A–Z</option>
+          <option value="name-desc">Name Z–A</option>
+          <option value="price-asc">Price Low–High</option>
+          <option value="price-desc">Price High–Low</option>
+        </select>
         <button id="clearSearch" class="clear-btn">Clear</button>
       </div>
-      <div id="searchResults" class="search-results"></div>
+      <div id="searchResults" class="search-results" aria-live="polite"></div>
     </section>
 
     <!-- Fresh Produce - ALL YOUR ORIGINAL PRODUCTS -->

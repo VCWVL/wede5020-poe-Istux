@@ -155,11 +155,14 @@ class FormValidator {
             submitBtn.textContent = 'Submitting...';
             submitBtn.disabled = true;
             
-            // Simulate form submission
-            await this.simulateSubmission();
+            // AJAX submit to the form action using helper makeRequest
+            const actionUrl = this.form.getAttribute('action') || '#';
+            const method = (this.form.getAttribute('method') || 'post').toUpperCase();
+            const data = new URLSearchParams(new FormData(this.form)).toString();
+            await makeRequest(actionUrl, method, data);
             
             this.showMessage('Thank you! Your enquiry has been submitted successfully.', 'success');
-            this.form.reset();
+            this.handlePostSubmit();
             
             // Reset field states
             Object.keys(this.fields).forEach(fieldName => {
@@ -168,7 +171,9 @@ class FormValidator {
             });
             
         } catch (error) {
-            this.showMessage('Sorry, there was an error submitting your form. Please try again.', 'error');
+            // Fallback to email client to ensure contact always works
+            this.mailtoFallback();
+            this.showMessage('We opened your email app with your message prefilled. If it did not open, please email info@thegreenbasket.co.za.', 'success');
         } finally {
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
@@ -229,3 +234,81 @@ document.addEventListener('DOMContentLoaded', function() {
         new FormValidator('newsletterForm');
     }
 });
+
+// Post-submit handlers and enquiry summary rendering
+FormValidator.prototype.handlePostSubmit = function() {
+    if (this.form.id === 'enquiryForm') {
+        const name = this.form.querySelector('#name')?.value || '';
+        const email = this.form.querySelector('#email')?.value || '';
+        const phone = this.form.querySelector('#phone')?.value || '';
+        const enquiryType = this.form.querySelector('#enquiryType')?.value || '';
+        const product = this.form.querySelector('#product')?.value || 'N/A';
+        const quantity = this.form.querySelector('#quantity')?.value || 'N/A';
+        const unit = this.form.querySelector('#quantityUnit')?.value || '';
+        const message = this.form.querySelector('#message')?.value || '';
+
+        // Simple response hint for cost/availability (demo logic)
+        const availability = enquiryType === 'product' || enquiryType === 'wholesale' ? 'Most items in stock' : 'N/A';
+
+        const summary = document.getElementById('enquirySummary');
+        const content = document.getElementById('summaryContent');
+        if (summary && content) {
+            content.innerHTML = `
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Phone:</strong> ${phone}</p>
+                <p><strong>Enquiry type:</strong> ${enquiryType}</p>
+                <p><strong>Product:</strong> ${product}</p>
+                <p><strong>Quantity:</strong> ${quantity} ${unit}</p>
+                <p><strong>Your message:</strong> ${message}</p>
+                <p><strong>Response:</strong> ${availability}. We’ll email you pricing/availability shortly.</p>
+            `;
+            summary.style.display = 'block';
+            this.form.style.display = 'none';
+        }
+
+        // Also open a prefilled email as a fallback
+        const subject = encodeURIComponent(`Green Basket enquiry: ${enquiryType}`);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nType: ${enquiryType}\nProduct: ${product}\nQuantity: ${quantity} ${unit}\n\nMessage:\n${message}`);
+        window.location.href = `mailto:info@thegreenbasket.co.za?subject=${subject}&body=${body}`;
+    } else if (this.form.id === 'contactForm') {
+        // Contact form mailto to ensure email is sent
+        const name = this.form.querySelector('#name')?.value || '';
+        const email = this.form.querySelector('#email')?.value || '';
+        const phone = this.form.querySelector('#phone')?.value || '';
+        const subjectSel = this.form.querySelector('#subject')?.value || 'general';
+        const message = this.form.querySelector('#message')?.value || '';
+        const subject = encodeURIComponent(`Contact: ${subjectSel}`);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nSubject: ${subjectSel}\n\nMessage:\n${message}`);
+        window.location.href = `mailto:info@thegreenbasket.co.za?subject=${subject}&body=${body}`;
+        this.form.reset();
+    } else {
+        this.form.reset();
+    }
+};
+
+// Build and trigger mailto as a universal fallback
+FormValidator.prototype.mailtoFallback = function() {
+    if (this.form.id === 'enquiryForm') {
+        const name = this.form.querySelector('#name')?.value || '';
+        const email = this.form.querySelector('#email')?.value || '';
+        const phone = this.form.querySelector('#phone')?.value || '';
+        const enquiryType = this.form.querySelector('#enquiryType')?.value || '';
+        const product = this.form.querySelector('#product')?.value || 'N/A';
+        const quantity = this.form.querySelector('#quantity')?.value || 'N/A';
+        const unit = this.form.querySelector('#quantityUnit')?.value || '';
+        const message = this.form.querySelector('#message')?.value || '';
+        const subject = encodeURIComponent(`Green Basket enquiry (fallback): ${enquiryType}`);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nType: ${enquiryType}\nProduct: ${product}\nQuantity: ${quantity} ${unit}\n\nMessage:\n${message}`);
+        window.location.href = `mailto:info@thegreenbasket.co.za?subject=${subject}&body=${body}`;
+    } else if (this.form.id === 'contactForm') {
+        const name = this.form.querySelector('#name')?.value || '';
+        const email = this.form.querySelector('#email')?.value || '';
+        const phone = this.form.querySelector('#phone')?.value || '';
+        const subjectSel = this.form.querySelector('#subject')?.value || 'general';
+        const message = this.form.querySelector('#message')?.value || '';
+        const subject = encodeURIComponent(`Contact (fallback): ${subjectSel}`);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nSubject: ${subjectSel}\n\nMessage:\n${message}`);
+        window.location.href = `mailto:info@thegreenbasket.co.za?subject=${subject}&body=${body}`;
+    }
+};

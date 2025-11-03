@@ -9,6 +9,8 @@ function initAllFeatures() {
     initSmoothAnimations();
     initBackToTop();
     initDynamicContent();
+    initLazyLoading();
+    initAccordion();
 }
 
 // Mobile Navigation
@@ -139,6 +141,35 @@ function loadFeaturedProducts() {
             `;
         }
     }, 1000);
+}
+
+// Lazy-load images that are not marked as eager
+function initLazyLoading() {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        if (!img.hasAttribute('loading')) {
+            img.setAttribute('loading', 'lazy');
+        }
+    });
+}
+
+// Simple accordion logic for .accordion sections
+function initAccordion() {
+    const questions = document.querySelectorAll('.accordion .question');
+    questions.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', String(!expanded));
+            const answer = btn.nextElementSibling;
+            if (answer) {
+                if (answer.hasAttribute('hidden')) {
+                    answer.removeAttribute('hidden');
+                } else {
+                    answer.setAttribute('hidden', '');
+                }
+            }
+        });
+    });
 }
 
 // Utility function for AJAX requests

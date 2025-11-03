@@ -6,6 +6,12 @@
   <meta name="description" content="Enquire about organic products, volunteering, or sponsorship at The Green Basket. Get information on pricing, availability and partnerships.">
   <meta name="keywords" content="product enquiry, volunteer opportunities, sponsorship, organic products pricing, availability, partnerships">
   <title>Product Enquiry & Partnerships | The Green Basket</title>
+  <link rel="canonical" href="https://thegreenbasket.co.za/enquiry.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Enquire about products and partnerships | The Green Basket">
+  <meta property="og:description" content="Ask about organic product pricing, availability, volunteering or sponsorship.">
+  <meta property="og:url" content="https://thegreenbasket.co.za/enquiry.html">
+  <meta property="og:image" content="https://thegreenbasket.co.za/images/high-angle-shot-meadow-covered-with-grass-sunset.jpg">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -25,7 +31,7 @@
     <h2>Enquiry Form</h2>
     <p>Please complete the form below and we will get back to you shortly with pricing, availability, or partnership information:</p>
     
-    <form id="enquiryForm" action="#" method="post">
+    <form id="enquiryForm" action="https://httpbin.org/post" method="post">
       <!-- Name input -->
       <div class="form-group">
         <label for="name">Full Name: *</label>
@@ -109,7 +115,7 @@
       <!-- Submit button -->
       <div class="form-group">
         <button type="submit" id="submitBtn">Submit Enquiry</button>
-        <div id="formMessage" class="form-message"></div>
+        <div id="formMessage" class="form-message" aria-live="polite"></div>
       </div>
     </form>
 

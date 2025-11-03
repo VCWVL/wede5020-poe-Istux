@@ -3,6 +3,14 @@
 <head>
   <meta charset="UTF-8"> <!-- Defines character encoding -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsiveness on all devices -->
+  <meta name="description" content="About The Green Basket: our story, mission, vision and values. We support local farmers and provide fresh organic groceries in South Africa.">
+  <meta name="keywords" content="about green basket, organic grocery story, mission, vision, values, local farmers, sustainability">
+  <link rel="canonical" href="https://thegreenbasket.co.za/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About The Green Basket">
+  <meta property="og:description" content="Our story, mission, vision and values. Supporting local farmers with fresh organic groceries.">
+  <meta property="og:url" content="https://thegreenbasket.co.za/about.html">
+  <meta property="og:image" content="https://thegreenbasket.co.za/images/team.webp">
   <title>About Us - The Green Basket</title> <!-- Page title -->
   <link rel="stylesheet" href="css/style.css">
   <script type="application/ld+json">
@@ -10,7 +18,7 @@
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "The Green Basket",
-  "image": "https://www.thegreenbasket.co.za/images/fruits.jpg",
+  "image": "https://thegreenbasket.co.za/images/team.webp",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "123 Green Street",
@@ -26,6 +34,7 @@
 
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to content</a>
   <!-- Header section with site title and navigation -->
   <header>
     <h1>The Green Basket</h1>
@@ -40,7 +49,7 @@
   </header>
 
   <!-- Main content starts -->
-  <main>
+  <main id="main">
     <!-- Company Story -->
     <section>
       <h2>Our Story</h2>
@@ -90,7 +99,31 @@
         to bring fresh, organic products to your table. Each member of our team shares the same values  
         of sustainability, health, and community support.
       </p>
-      <img src="images/team.webp" alt="The Green Basket Team" class="team-photo">
+    <img src="images/team.webp" alt="The Green Basket Team" class="team-photo">
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="accordion">
+      <h2>Frequently Asked Questions</h2>
+      <div class="item">
+        <button class="question" aria-expanded="false">Do you deliver?</button>
+        <div class="answer" hidden>
+          <p>We currently offer pickup in-store and are piloting local delivery in Durban.</p>
+        </div>
+      </div>
+      <div class="item">
+        <button class="question" aria-expanded="false">Are products 100% organic?</button>
+        <div class="answer" hidden>
+          <p>Yes, sourced from vetted local farms practicing organic methods.</p>
+        </div>
+      </div>
+      <div class="item">
+        <button class="question" aria-expanded="false">How can I volunteer or partner?</button>
+        <div class="answer" hidden>
+          <p>Use the Enquiry page and choose Volunteer or Sponsorship. We’ll get back to you.</p>
+        </div>
+      </div>
+      <p>Explore our <a href="products.html#produceTable">fresh produce</a>.</p>
     </section>
   </main>
 

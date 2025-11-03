@@ -6,10 +6,17 @@
   <meta name="description" content="The Green Basket - Fresh organic groceries in South Africa. 100% organic produce, dairy, bakery items from local farmers. Sustainable, healthy living.">
   <meta name="keywords" content="organic groceries, fresh produce, South Africa, local farmers, healthy food, sustainable living, organic milk, fresh vegetables, KwaZulu-Natal">
   <title>The Green Basket | Fresh Organic Groceries & Local Produce</title>
+  <link rel="canonical" href="https://thegreenbasket.co.za/index.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Green Basket | Fresh Organic Groceries & Local Produce">
+  <meta property="og:description" content="Fresh organic produce, dairy, bakery and pantry goods from local South African farmers.">
+  <meta property="og:url" content="https://thegreenbasket.co.za/index.html">
+  <meta property="og:image" content="https://thegreenbasket.co.za/images/high-angle-shot-meadow-covered-with-grass-sunset.jpg">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to content</a>
   <header>
     <h1>The Green Basket</h1>
     <nav>
@@ -22,14 +29,21 @@
     <hr>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero fade-in">
       <h2>Fresh. Organic. Local.</h2>
       <p class="welcome">
         Welcome to <strong>The Green Basket</strong>, your trusted organic grocery store in South Africa.
         We are committed to bringing you the freshest <em>organic produce, dairy, bakery, and pantry goods</em>,
         all ethically sourced from local farmers.
+        <a href="products.html#produceTable">Browse our fresh produce</a>.
       </p>
+    </section>
+
+    <!-- Featured Products (dynamic content injected by JS) -->
+    <section class="featured-products fade-in">
+      <h2>Featured Products</h2>
+      <div class="featured-list"></div>
     </section>
 
     <section class="features fade-in">
@@ -70,7 +84,7 @@
         <input type="email" id="newsletter-email" name="newsletter-email" placeholder="Your email address" required>
         <button type="submit">Subscribe</button>
       </form>
-      <div id="newsletter-message"></div>
+      <div id="newsletter-message" aria-live="polite"></div>
     </section>
   </main>
 

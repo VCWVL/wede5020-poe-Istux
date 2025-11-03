@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const enquiryType = document.getElementById('enquiryType');
     const productSelection = document.getElementById('productSelection');
     const quantityGroup = document.getElementById('quantityGroup');
+    const newEnquiryBtn = document.getElementById('newEnquiry');
+    const form = document.getElementById('enquiryForm');
+    const summary = document.getElementById('enquirySummary');
     
     if (enquiryType) {
         enquiryType.addEventListener('change', function() {
@@ -55,5 +58,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize form based on current selection
     if (enquiryType && enquiryType.value) {
         updateFormForEnquiryType(enquiryType.value);
+    }
+
+    // Reset to new enquiry after summary
+    if (newEnquiryBtn && form && summary) {
+        newEnquiryBtn.addEventListener('click', function() {
+            form.reset();
+            summary.style.display = 'none';
+            form.style.display = 'block';
+            if (enquiryType) updateFormForEnquiryType(enquiryType.value || 'other');
+        });
     }
 });

@@ -6,6 +6,12 @@
     <meta name="description" content="Contact The Green Basket - Organic grocery store in Durban. Visit us, call, or send a message. Interactive map with directions.">
     <meta name="keywords" content="contact organic store, Durban location, store hours, phone number, email, directions, map">
     <title>Contact Us | Visit Our Organic Store - The Green Basket</title>
+    <link rel="canonical" href="https://thegreenbasket.co.za/contact.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact The Green Basket">
+    <meta property="og:description" content="Get in touch with The Green Basket. View our map, hours and contact form.">
+    <meta property="og:url" content="https://thegreenbasket.co.za/contact.html">
+    <meta property="og:image" content="https://thegreenbasket.co.za/images/high-angle-shot-meadow-covered-with-grass-sunset.jpg">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
@@ -58,7 +64,7 @@
         <!-- Contact form -->
         <section class="contact-form">
             <h3>Send Us a Message</h3>
-            <form id="contactForm" action="#" method="post">
+            <form id="contactForm" action="https://httpbin.org/post" method="post">
                 <div class="form-group">
                     <label for="name">Your Name: *</label>
                     <input type="text" id="name" name="name" required minlength="2" maxlength="50">
@@ -105,7 +111,7 @@
 
                 <div class="form-group">
                     <button type="submit" id="submitBtn">Send Message</button>
-                    <div id="formMessage" class="form-message"></div>
+                    <div id="formMessage" class="form-message" aria-live="polite"></div>
                 </div>
             </form>
         </section>

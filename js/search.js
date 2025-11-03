@@ -3,6 +3,7 @@ class ProductSearch {
     constructor() {
         this.searchInput = document.getElementById('productSearch');
         this.categoryFilter = document.getElementById('categoryFilter');
+        this.sortBy = document.getElementById('sortBy');
         this.clearButton = document.getElementById('clearSearch');
         this.searchResults = document.getElementById('searchResults');
         this.allProducts = this.getAllProducts();
@@ -13,6 +14,9 @@ class ProductSearch {
     init() {
         this.searchInput.addEventListener('input', this.handleSearch.bind(this));
         this.categoryFilter.addEventListener('change', this.handleSearch.bind(this));
+        if (this.sortBy) {
+            this.sortBy.addEventListener('change', this.handleSearch.bind(this));
+        }
         this.clearButton.addEventListener('click', this.clearSearch.bind(this));
     }
     
@@ -51,6 +55,9 @@ class ProductSearch {
             results = results.filter(product => product.category === selectedCategory);
         }
         
+        // Sort results based on dropdown
+        results = this.sortResults(results);
+
         this.displayResults(results, searchTerm, selectedCategory);
     }
     
@@ -67,6 +74,31 @@ class ProductSearch {
         
         // Update results counter
         this.updateResultsCounter(results.length, searchTerm, selectedCategory);
+    }
+
+    getPriceFromRow(row) {
+        const priceCell = row.querySelector('td:nth-child(3)');
+        if (!priceCell) return NaN;
+        const text = priceCell.textContent || '';
+        const match = text.replace(/,/g, '').match(/(\d+(?:\.\d+)?)/);
+        return match ? parseFloat(match[1]) : NaN;
+    }
+
+    sortResults(results) {
+        if (!this.sortBy) return results;
+        const value = this.sortBy.value;
+        const sorted = [...results];
+
+        if (value === 'name-asc') {
+            sorted.sort((a, b) => a.name.localeCompare(b.name));
+        } else if (value === 'name-desc') {
+            sorted.sort((a, b) => b.name.localeCompare(a.name));
+        } else if (value === 'price-asc') {
+            sorted.sort((a, b) => this.getPriceFromRow(a.element) - this.getPriceFromRow(b.element));
+        } else if (value === 'price-desc') {
+            sorted.sort((a, b) => this.getPriceFromRow(b.element) - this.getPriceFromRow(a.element));
+        }
+        return sorted;
     }
     
     updateResultsCounter(count, searchTerm, selectedCategory) {

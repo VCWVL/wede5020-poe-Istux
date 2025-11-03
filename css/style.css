@@ -22,6 +22,27 @@ body {
   padding: 0;
 }
 
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  background: #2d572c;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  z-index: 10000;
+}
+
 /* ================================
    HEADER & FOOTER
    ================================ */
@@ -659,6 +680,12 @@ footer a:hover {
     font-size: 1rem;
 }
 
+/* Ensure dropdown options are readable on Windows (white list background) */
+.category-filter option {
+    color: #222;
+    background: #ffffff;
+}
+
 .clear-btn {
     background: #6c757d;
     color: white;
@@ -867,6 +894,25 @@ footer a:hover {
     border-radius: 6px;
     margin-top: 1rem;
     border-left: 4px solid #4e944f;
+}
+
+/* Accordion */
+.accordion .question {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid #d9fdd3;
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    color: #d9fdd3;
+}
+.accordion .item { margin-bottom: 0.75rem; }
+.accordion .answer {
+    background: rgba(255,255,255,0.06);
+    border-left: 4px solid #4e944f;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
 }
 
 .directions-info, .location-info, .route-details {

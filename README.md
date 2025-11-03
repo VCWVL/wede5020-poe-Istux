@@ -289,6 +289,47 @@ Testing the website on Different browsers and testing on different devices.
 
 References:
 
+PART 3
+
+Enhancements Implemented (Functionality and SEO)
+
+- JavaScript interactive features:
+  - Added dynamic content loader for a `featured-products` section on `index.html`.
+  - Implemented product search + category filter + new sorting (Name/Price) in `products.html` with `js/search.js`.
+  - Added smooth scroll-in animations and a Back-to-Top control (already present in Part 2, refined).
+  - Integrated Lightbox gallery for product images (Part 3 requirement: gallery/lightbox).
+
+- Interactive Map (Leaflet):
+  - Store marker, Locate Me, Get Directions, Reset Map.
+  - Distance calculation and simple route visualization using polylines.
+
+- Forms and Validation:
+  - Client-side validation via `js/forms.js` applied to `enquiryForm`, `contactForm`, `newsletterForm`.
+  - Converted forms to AJAX submission using `makeRequest(...)` helper.
+  - Set explicit form action URLs (`https://httpbin.org/post`) for demo submission.
+  - On successful enquiry, render a structured Enquiry Summary with basic availability response and a `mailto:` fallback.
+
+- SEO (On-page & Additional Requests):
+  - Added meta description/keywords to `about.html`.
+  - Ensured descriptive alt text for images on products page.
+  - Corrected `sitemap.xml` XML namespace and set `robots.txt` to reference `/sitemap.xml`.
+
+Changelog (Part 3)
+
+- index.html: Added `section.featured-products` for dynamic content.
+- products.html: Added Sort control; `js/search.js` updated to support Name/Price sorting.
+- contact.html, enquiry.html: Set real action URLs (POST) for AJAX.
+- js/forms.js: Switched from simulated timeout to real AJAX; renders enquiry summary and mailto fallback.
+- js/enquiry.js: Added New Enquiry reset logic; refined dynamic placeholders.
+- about.html: Added missing SEO meta tags.
+- sitemap.xml: Fixed namespace to `http://www.sitemaps.org/schemas/sitemap/0.9`.
+- robots.txt: Updated Sitemap path to `/sitemap.xml`.
+
+References (additional)
+
+- MDN Web Docs. Using FormData and URLSearchParams for AJAX forms.
+- LeafletJS documentation for markers, popups, and polylines.
+
 W3C (2023). HTML & CSS Standards. Available at: https://www.w3.org/ (Accessed: 27 August 2025).
 
 MDN Web Docs (2024). HTML: HyperText Markup Language. Mozilla. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML (Accessed: 27 August 2025).
