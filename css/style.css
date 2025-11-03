@@ -551,6 +551,13 @@ nav a:hover {
   transform: scale(1.05);
 }
 
+/* Featured products grid */
+.featured-products .featured-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
 /* =======================================
    PAGE SECTIONS FADE-IN ANIMATION
    ======================================= */

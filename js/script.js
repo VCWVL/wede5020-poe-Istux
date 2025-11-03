@@ -129,18 +129,37 @@ function initDynamicContent() {
 }
 
 function loadFeaturedProducts() {
-    // Simulate dynamic content loading
-    setTimeout(() => {
-        const featuredSection = document.querySelector('.featured-products');
-        if (featuredSection) {
-            featuredSection.innerHTML += `
-                <div class="featured-item fade-in">
-                    <h4>New Arrival: Organic Avocados</h4>
-                    <p>Fresh from our local farms - R20 each</p>
+    const featuredSection = document.querySelector('.featured-products');
+    const list = document.querySelector('.featured-products .featured-list');
+    if (!featuredSection || !list) return;
+
+    list.setAttribute('aria-live', 'polite');
+    list.classList.add('loading');
+    list.innerHTML = '<p>Loading featured items…</p>';
+
+    // Fetch featured items from local JSON
+    makeRequest('data/featured.json', 'GET')
+        .then((response) => {
+            const items = JSON.parse(response);
+            if (!Array.isArray(items)) throw new Error('Invalid data');
+
+            list.classList.remove('loading');
+            list.innerHTML = items.map(item => `
+                <div class="featured-item fade-in product-card" role="article">
+                    <h4>${item.title}</h4>
+                    ${item.image ? `<img src="${item.image}" alt="${item.title}" loading="lazy">` : ''}
+                    <p>${item.description}</p>
+                    ${item.price ? `<p><strong>${item.price}</strong></p>` : ''}
                 </div>
-            `;
-        }
-    }, 1000);
+            `).join('');
+        })
+        .catch(() => {
+            list.classList.remove('loading');
+            list.innerHTML = `
+                <div class="featured-item">
+                    <p>We couldn't load featured items right now. Please try again later.</p>
+                </div>`;
+        });
 }
 
 // Lazy-load images that are not marked as eager

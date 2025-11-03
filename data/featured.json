@@ -1,0 +1,21 @@
+[
+  {
+    "title": "Organic Avocados",
+    "description": "Creamy, locally sourced avocados – perfect for salads and toast.",
+    "price": "R20 each",
+    "image": "images/avocados.jpg"
+  },
+  {
+    "title": "Raw Honey (500g)",
+    "description": "Unfiltered, pure honey from community beekeepers.",
+    "price": "R65",
+    "image": "images/honey.jpg"
+  },
+  {
+    "title": "Wholegrain Bread",
+    "description": "Freshly baked daily with whole grains for better nutrition.",
+    "price": "R18",
+    "image": "images/bread.jpg"
+  }
+]
+
