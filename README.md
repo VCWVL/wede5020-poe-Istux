@@ -544,6 +544,10 @@ Consistent branding across all pages creates a seamless browsing journey.
 
 visuals from the website.
 
+sitemap
+<img width="1024" height="1536" alt="make a visual sitema" src="https://github.com/user-attachments/assets/83fe9fa6-dea1-4e31-872a-a03b30622b14" />
+
+
 
 <img width="349" height="534" alt="Screenshot 2025-11-03 202334" src="https://github.com/user-attachments/assets/0a551e32-def6-48cd-b375-8bb6cc181a1d" />
 <img width="1919" height="1079" alt="Screenshot 2025-11-03 211933" src="https://github.com/user-attachments/assets/9464eb71-b7bf-4948-814a-f08fd079472f" />
