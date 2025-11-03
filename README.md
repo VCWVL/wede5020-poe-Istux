@@ -542,6 +542,30 @@ Enhanced SEO ensures returning users find the site quickly on search engines.
 Consistent branding across all pages creates a seamless browsing journey.
 
 
+visuals from the website.
+
+
+<img width="349" height="534" alt="Screenshot 2025-11-03 202334" src="https://github.com/user-attachments/assets/0a551e32-def6-48cd-b375-8bb6cc181a1d" />
+<img width="1919" height="1079" alt="Screenshot 2025-11-03 211933" src="https://github.com/user-attachments/assets/9464eb71-b7bf-4948-814a-f08fd079472f" />
+<img width="1919" height="1032" alt="Screenshot 2025-11-03 211947" src="https://github.com/user-attachments/assets/7825de22-0dbf-4068-a8df-83d1df010f60" />
+<img width="1919" height="1030" alt="Screenshot 2025-11-03 211957" src="https://github.com/user-attachments/assets/a2e1101b-dccb-4cff-8403-1850cbb34455" />
+<img width="1897" height="1014" alt="Screenshot 2025-11-03 212016" src="https://github.com/user-attachments/assets/44191481-9ae8-491e-8c51-aa430b33b861" />
+<img width="1916" height="1022" alt="Screenshot 2025-11-03 212027" src="https://github.com/user-attachments/assets/e4f81bd1-4105-4340-aad6-baa9f3c6dde7" />
+<img width="1919" height="1028" alt="Screenshot 2025-11-03 212034" src="https://github.com/user-attachments/assets/593ce628-9e46-4291-b8db-23b617c90de7" />
+<img width="1919" height="1031" alt="Screenshot 2025-11-03 212120" src="https://github.com/user-attachments/assets/cdb1267c-389f-4668-bc77-12863658fb64" />
+<img width="1919" height="1031" alt="Screenshot 2025-11-03 212130" src="https://github.com/user-attachments/assets/eb44bca7-5d7e-480b-8b26-2b3ecd832cd7" />
+<img width="1919" height="1034" alt="Screenshot 2025-11-03 212142" src="https://github.com/user-attachments/assets/a1354734-718a-4efa-90ec-ee636d937419" />
+<img width="1919" height="1031" alt="Screenshot 2025-11-03 212150" src="https://github.com/user-attachments/assets/86e6e1c8-4cec-4cd1-80e9-37f31a32d0be" />
+<img width="1919" height="1025" alt="Screenshot 2025-11-03 212200" src="https://github.com/user-attachments/assets/79c7ecaf-7882-4b62-aaf6-453c7a68cf51" />
+<img width="1919" height="1037" alt="Screenshot 2025-11-03 212221" src="https://github.com/user-attachments/assets/9ea7a11e-32e6-4eec-8ea3-ac221053a64d" />
+<img width="1919" height="1039" alt="Screenshot 2025-11-03 212235" src="https://github.com/user-attachments/assets/350a91e9-a7bc-4c47-afe6-f42085446295" />
+<img width="1909" height="1023" alt="Screenshot 2025-11-03 212244" src="https://github.com/user-attachments/assets/e402b1ba-7075-46f1-8b3d-b41b4a512339" />
+<img width="1909" height="1023" alt="Screenshot 2025-11-03 212244" src="https://github.com/user-attachments/assets/a403389b-8579-4464-a38f-4334e47ed70a" />
+<img width="1919" height="1025" alt="Screenshot 2025-11-03 212323" src="https://github.com/user-attachments/assets/fb4708b8-ea44-47c9-9e75-f08e9bec55fe" />
+<img width="1919" height="1039" alt="Screenshot 2025-11-03 212339" src="https://github.com/user-attachments/assets/1bd48c80-a9de-4dc9-aa9e-66261e5a81b5" />
+
+
+
 
 References (additional)
 
