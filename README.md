@@ -291,6 +291,33 @@ Testing the website on Different browsers and testing on different devices.
 
 PART 3
 
+Overview
+
+This phase of the project focuses on enhancing the website’s functionality, usability, and visibility.
+The improvements include adding JavaScript-based interactivity, implementing form validation, improving Search Engine Optimization (SEO), and ensuring mobile responsiveness.
+All code was tested across multiple devices and browsers to ensure consistent functionality and accessibility.
+
+Website Goals – Part 3
+
+The main goals for Part 3 were to enhance functionality, improve user engagement, and increase online visibility through technical and visual upgrades.
+These goals focused on improving both user experience (UX) and Search Engine Optimization (SEO) while maintaining consistent branding and accessibility across all pages.
+
+Key Goals:
+
+To make the website more interactive and engaging through JavaScript functionality (modals, accordions, search filters).
+
+To improve discoverability and ranking performance on search engines through structured on-page and off-page SEO techniques.
+
+To ensure mobile responsiveness and accessibility across different devices and browsers.
+
+To validate and secure all form submissions using client-side JavaScript validation.
+
+To increase performance and loading speed through optimization and lazy loading.
+
+To improve website maintainability with modular JavaScript and clean, reusable CSS.
+
+To ensure search engines can easily index the website using robots.txt and sitemap.xml files.
+
 Enhancements Implemented (Functionality and SEO)
 
 - JavaScript interactive features:
@@ -313,6 +340,35 @@ Enhancements Implemented (Functionality and SEO)
   - Added meta description/keywords to `about.html`.
   - Ensured descriptive alt text for images on products page.
   - Corrected `sitemap.xml` XML namespace and set `robots.txt` to reference `/sitemap.xml`.
+ 
+  How Part 3 Improves the Website from Part 2
+
+Part 2 primarily focused on structure, layout, and static content, ensuring that the website met design and usability standards.
+Part 3 builds upon that foundation by integrating advanced functionality, interactivity, and optimization features.
+
+Improvements Over Part 2:
+
+Interactivity Added:
+JavaScript introduces dynamic elements such as modals, accordions, and product search — creating a more engaging browsing experience.
+
+Form Validation Introduced:
+Contact and enquiry forms now include real-time validation with custom error messages, ensuring data accuracy and user feedback.
+
+SEO Optimization:
+Pages are now optimized with meta tags, headers, alt text, clean URLs, and internal linking — improving visibility on search engines.
+
+Performance and Accessibility:
+CSS and JS were optimized for faster loading, and ARIA labels were added to support assistive technologies.
+
+Mobile Optimization:
+Enhanced responsive design ensures consistent usability across devices, improving mobile user satisfaction.
+
+Dynamic Content Loading:
+Products and key sections now load dynamically, allowing easier updates and scalability for future expansion.
+
+Professional Standards:
+Addition of robots.txt, sitemap.xml, and social metadata elevates the project to professional web development standards.
+
 
 Changelog (Part 3)
 
@@ -355,6 +411,135 @@ Changelog (Part 3)
 -Added security improvements, including input sanitization for form data.
 
 -Updated GitHub repository with all Part 3 changes and detailed commit messages.
+
+-New frequently asked questions on about us page.
+
+-Quick scroll up button at the end of each screen.
+
+
+Project Timeline – Part 3
+Phase 1: Planning & Analysis
+
+Reviewed website from Part 2.
+
+Identified missing interactivity, SEO, and responsiveness features.
+
+Created enhancement plan and feature checklist.
+
+Duration: 1 Day.
+
+Phase 2: JavaScript Integration
+
+Added full form validation for Enquiry and Contact pages.
+
+Introduced product search, hover effects, and modals.
+
+Created user alerts for successful or invalid form submissions.
+
+Tested across all pages for browser compatibility.
+
+Duration: 2 Days.
+
+Phase 3: CSS Enhancements & Transitions
+
+Added smooth transitions and hover animations for buttons, images, and navigation links.
+
+Improved layout spacing and visual hierarchy.
+
+Enhanced responsiveness for tablet and mobile views.
+
+Duration: 1 Day.
+
+Phase 4: SEO & Accessibility Optimization
+
+Implemented meta tags, alt text, and semantic HTML improvements.
+
+Added robots.txt and sitemap.xml for better indexing.
+
+Ensured proper heading structure and ARIA labels for accessibility.
+
+Duration: 1 Day.
+
+Phase 5: Testing & Final Review
+
+Validated HTML, CSS, and JavaScript using online validators.
+
+Tested all interactive features and form submissions.
+
+Checked responsiveness and loading performance.
+
+Final visual review and polish before submission.
+
+Duration: 1 Day.
+
+
+User Journey – Part 3
+
+1. Landing on the Website (Home Page)
+User visits The Green Basket homepage.
+
+Sees a clean, eco-friendly design with smooth transitions and clear navigation.
+
+Instantly understands the brand’s focus on sustainable and organic products.
+
+Can navigate easily using the header menu with hover effects.
+
+2. Exploring Products
+User clicks on Products in the navigation bar.
+
+Product cards display images, prices, and descriptions.
+
+Hover animations highlight products, improving engagement.
+
+Search bar and filters allow users to quickly find specific items.
+
+Clicking on a product opens a modal with detailed information.
+
+3. Learning About the Brand
+User navigates to the About Us page.
+
+Reads company background and values (sustainability, eco-awareness).
+
+Engages with visually appealing layout and imagery.
+
+Gains trust and brand connection before purchasing or enquiring.
+
+4. Making an Enquiry
+User visits the Enquiry page.
+
+Completes the form with name, email, and message.
+
+JavaScript validation ensures all required fields are filled correctly.
+
+User receives confirmation or error alerts instantly.
+
+5. Getting in Touch (Contact Page)
+
+User clicks Contact to find location, phone number, and email.
+
+Interactive Google Map helps locate the store easily.
+
+Contact form allows direct communication.
+
+Real-time validation ensures message accuracy.
+
+6. Browsing on Mobile
+On smaller screens, responsive design automatically adjusts layout.
+
+Navigation collapses vertically for easier use.
+
+Buttons and links remain accessible and touch-friendly.
+
+Transitions and hover states optimized for mobile experience.
+
+7. Overall Experience
+Website feels modern, interactive, and professional.
+
+User can easily navigate, explore products, and contact the business.
+
+Enhanced SEO ensures returning users find the site quickly on search engines.
+
+Consistent branding across all pages creates a seamless browsing journey.
 
 
 
