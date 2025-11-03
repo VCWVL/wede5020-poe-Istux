@@ -317,24 +317,43 @@ Enhancements Implemented (Functionality and SEO)
 Changelog (Part 3)
 
 -Added meta titles and descriptions to every page to improve search visibility.
+
 -Included Open Graph tags for better sharing on social media.
+
 -Improved heading hierarchy (H1 > H2 > H3) for SEO and readability.
+
 -Added alt attributes to all images for accessibility and SEO.
+
 -Implemented smooth-scroll behavior on all navigation links using JavaScript.
+
 -Added hover transitions and animation effects to buttons, links, and images in CSS.
+
 -Improved mobile responsiveness using CSS media queries and flexbox adjustments.
+
 -Added interactive product modal to products.html so users can view product details dynamically.
+
 -Implemented search and filter functionality on the products page.
+
 -Used JavaScript dynamic content loading for products to make site scalable.
+
 -Added accordion functionality for collapsible content areas.
+
 -Created JavaScript form validation for contact.html and enquiry.html to check required fields, email format, and message length.
+
 -Added error messages and highlights for invalid form fields.
+
 -Included ARIA roles and labels for better screen-reader accessibility.
+
 -Added lazy loading for large images to improve page performance.
+
 -Minified and optimized CSS and JavaScript for faster load times
+
 -Created robots.txt file to guide search-engine crawlers.
+
 -Added sitemap.xml file to support search-engine indexing.
+
 -Added security improvements, including input sanitization for form data.
+
 -Updated GitHub repository with all Part 3 changes and detailed commit messages.
 
 
@@ -373,4 +392,27 @@ Tilburg Science Hub n/a README best practices. Available at: https://tilburgscie
 
 Merlos, J. n/a How to write a good README. DEV Community. Available at: https://dev.to/merlos/how-to-write-a-good-readme-bog
  [Accessed: 27 September 2025].
+
+ References (part3)
+
+Google (2023) Search Engine Optimization (SEO) Starter Guide. Google Search Central. Available at: https://developers.google.com/search/docs
+ (Accessed: 3 November 2025).
+
+Moz (2024) On-page SEO best practices. Available at: https://moz.com/learn/seo/on-page-factors
+ (Accessed: 3 November 2025).
+
+W3Schools (2024) JavaScript Form Validation. Available at: https://www.w3schools.com/js/js_validation.asp
+ (Accessed: 3 November 2025).
+
+MDN Web Docs (2024) Using CSS transitions. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions
+ (Accessed: 3 November 2025).
+
+HubSpot (2023) Website optimization guide. Available at: https://blog.hubspot.com/marketing/website-optimization
+ (Accessed: 3 November 2025).
+
+Yoast (2024) Technical SEO basics. Available at: https://yoast.com/seo-basics
+ (Accessed: 3 November 2025).
+
+W3C (2022) Web Content Accessibility Guidelines (WCAG) 2.1. Available at: https://www.w3.org/TR/WCAG21/
+ (Accessed: 3 November 2025).
 
