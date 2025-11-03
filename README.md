@@ -287,7 +287,7 @@ Testing the website on Different browsers and testing on different devices.
 
 
 
-References:
+
 
 PART 3
 
@@ -316,19 +316,31 @@ Enhancements Implemented (Functionality and SEO)
 
 Changelog (Part 3)
 
-- index.html: Added `section.featured-products` for dynamic content.
-- products.html: Added Sort control; `js/search.js` updated to support Name/Price sorting.
-- contact.html, enquiry.html: Set real action URLs (POST) for AJAX.
-- js/forms.js: Switched from simulated timeout to real AJAX; renders enquiry summary and mailto fallback.
-- js/enquiry.js: Added New Enquiry reset logic; refined dynamic placeholders.
-- about.html: Added missing SEO meta tags.
-- sitemap.xml: Fixed namespace to `http://www.sitemaps.org/schemas/sitemap/0.9`.
-- robots.txt: Updated Sitemap path to `/sitemap.xml`.
+-Added meta titles and descriptions to every page to improve search visibility.
+-Included Open Graph tags for better sharing on social media.
+-Improved heading hierarchy (H1 > H2 > H3) for SEO and readability.
+-Added alt attributes to all images for accessibility and SEO.
+-Implemented smooth-scroll behavior on all navigation links using JavaScript.
+-Added hover transitions and animation effects to buttons, links, and images in CSS.
+-Improved mobile responsiveness using CSS media queries and flexbox adjustments.
+-Added interactive product modal to products.html so users can view product details dynamically.
+-Implemented search and filter functionality on the products page.
+-Used JavaScript dynamic content loading for products to make site scalable.
+-Added accordion functionality for collapsible content areas.
+-Created JavaScript form validation for contact.html and enquiry.html to check required fields, email format, and message length.
+-Added error messages and highlights for invalid form fields.
+-Included ARIA roles and labels for better screen-reader accessibility.
+-Added lazy loading for large images to improve page performance.
+-Minified and optimized CSS and JavaScript for faster load times
+-Created robots.txt file to guide search-engine crawlers.
+-Added sitemap.xml file to support search-engine indexing.
+-Added security improvements, including input sanitization for form data.
+-Updated GitHub repository with all Part 3 changes and detailed commit messages.
+
+
 
 References (additional)
 
-- MDN Web Docs. Using FormData and URLSearchParams for AJAX forms.
-- LeafletJS documentation for markers, popups, and polylines.
 
 W3C (2023). HTML & CSS Standards. Available at: https://www.w3.org/ (Accessed: 27 August 2025).
 
